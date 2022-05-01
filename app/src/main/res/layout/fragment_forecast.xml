@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forecastSwipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ForecastFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/todayForecastCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/forecast_City"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/rotonda_regular"
+                    android:text="Pune"
+                    android:textSize="60sp" />
+
+                <TextView
+                    android:id="@+id/forecastTemperatureTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forecast_City"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rotonda_regular"
+                    android:text="32"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forecast_City"
+                    android:layout_toEndOf="@id/forecastTemperatureTextView"
+                    android:fontFamily="@font/rotonda_regular"
+                    android:text="\u2103"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/forecastMaxMin_RelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forecastTemperatureTextView"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/maxminMaxTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/rotonda_regular"
+                        android:text="11\u2103"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/divideBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toEndOf="@id/maxminMaxTextView"
+                        android:fontFamily="@font/rotonda_regular"
+                        android:text="/"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/maxminMinTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/divideBy"
+                        android:fontFamily="@font/rotonda_regular"
+                        android:text="2\u2103"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/feelsLikeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forecastMaxMin_RelativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/rotonda_regular"
+                    android:text="Feels like : 30\u2103"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/ForecastCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/todayForecastCard">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/forecast_img1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/forecastImage1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/weather_sunny" />
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <TextView
+                                android:id="@+id/forecast_date1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toRightOf="@id/forecast_img1"
+                                android:fontFamily="@font/rotonda_regular"
+                                android:text="2022-05-01" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_below="@id/forecast_date1"
+                                android:layout_toEndOf="@id/forecast_img1"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/forecast_max1"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:text="Max : 30\u2103" />
+
+                                <TextView
+                                    android:id="@+id/forecast_min1"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Min : 15\u2103" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/forecast_img2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/forecastImage2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/weather_sunny" />
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <TextView
+                                android:id="@+id/forecast_date2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toRightOf="@id/forecast_img2"
+                                android:fontFamily="@font/rotonda_regular"
+                                android:text="2022-05-01" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_below="@id/forecast_date2"
+                                android:layout_toEndOf="@id/forecast_img2"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/forecast_max2"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:text="Max : 30\u2103" />
+
+                                <TextView
+                                    android:id="@+id/forecast_min2"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Min : 15\u2103" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/forecast_img3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/forecastImage3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/weather_sunny" />
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <TextView
+                                android:id="@+id/forecast_date3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toRightOf="@id/forecast_img3"
+                                android:fontFamily="@font/rotonda_regular"
+                                android:text="2022-05-01" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_below="@id/forecast_date3"
+                                android:layout_toEndOf="@id/forecast_img3"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/forecast_max3"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:text="Max : 30\u2103" />
+
+                                <TextView
+                                    android:id="@+id/forecast_min3"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Min : 15\u2103" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/forecast_img4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/forecastImage4"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/weather_sunny" />
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <TextView
+                                android:id="@+id/forecast_date4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toRightOf="@id/forecast_img4"
+                                android:fontFamily="@font/rotonda_regular"
+                                android:text="2022-05-01" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_below="@id/forecast_date4"
+                                android:layout_toEndOf="@id/forecast_img4"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/forecast_max4"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:text="Max : 30\u2103" />
+
+                                <TextView
+                                    android:id="@+id/forecast_min4"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Min : 15\u2103" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/forecast_img5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/forecastImage5"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/weather_sunny" />
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <TextView
+                                android:id="@+id/forecast_date5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toRightOf="@id/forecast_img5"
+                                android:fontFamily="@font/rotonda_regular"
+                                android:text="2022-05-01" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_below="@id/forecast_date5"
+                                android:layout_toEndOf="@id/forecast_img5"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/forecast_max5"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:text="Max : 30\u2103" />
+
+                                <TextView
+                                    android:id="@+id/forecast_min5"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rotonda_regular"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Min : 15\u2103" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

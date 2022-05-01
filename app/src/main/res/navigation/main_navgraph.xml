@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.imcodernitesh.weatheropedia.fragments.ForecastFragment"
+        android:label="fragment_forecast"
+        tools:layout="@layout/fragment_forecast" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.imcodernitesh.weatheropedia.fragments.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/airPollutionFragment"
+        android:name="com.imcodernitesh.weatheropedia.fragments.AirPollutionFragment"
+        android:label="fragment_air_pollution"
+        tools:layout="@layout/fragment_air_pollution" />
+</navigation>

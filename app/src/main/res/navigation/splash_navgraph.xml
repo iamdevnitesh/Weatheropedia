@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_navgraph"
+    app:startDestination="@id/checkPermissionFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.imcodernitesh.weatheropedia.fragments.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splash_navgraph" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/checkPermissionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.imcodernitesh.weatheropedia.onboarding.ViewPagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/checkPermissionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkPermissionFragment"
+        android:name="com.imcodernitesh.weatheropedia.fragments.CheckPermissionFragment"
+        android:label="fragment_check_permission"
+        tools:layout="@layout/fragment_check_permission" >
+        <action
+            android:id="@+id/action_checkPermissionFragment_to_splashFragment"
+            app:destination="@id/splashFragment"
+            app:popUpTo="@id/splash_navgraph" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.imcodernitesh.weatheropedia.activities.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

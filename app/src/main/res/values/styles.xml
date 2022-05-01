@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">30dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">@color/input_cursor</item>
+    </style>
+    <style name="SplashScreenBackground">
+        <item name="android:src">@drawable/background_white</item>
+    </style>
+    <style name="SplashScreenLottie">
+        <item name="android:layout_below">@id/splash_cardview</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="dashboardTopBar">
+        <item name="neumorph_cornerSizeBottomLeft">30dp</item>
+        <item name="neumorph_cornerSizeBottomRight">30dp</item>
+        <item name="neumorph_cornerSizeTopLeft">0dp</item>
+        <item name="neumorph_cornerSizeTopRight">0dp</item>
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+</resources>
