@@ -14,12 +14,13 @@
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
-            app:popUpTo="@id/splash_navgraph" />
+            app:popUpTo="@id/checkPermissionFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_splashFragment_to_homeActivity"
             app:destination="@id/homeActivity"
             app:popUpTo="@id/checkPermissionFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
@@ -30,7 +31,7 @@
             android:id="@+id/action_viewPagerFragment_to_homeActivity"
             app:destination="@id/homeActivity"
             app:popUpTo="@id/checkPermissionFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/checkPermissionFragment"
@@ -40,7 +41,7 @@
         <action
             android:id="@+id/action_checkPermissionFragment_to_splashFragment"
             app:destination="@id/splashFragment"
-            app:popUpTo="@id/splash_navgraph" />
+            app:popUpToInclusive="false" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"

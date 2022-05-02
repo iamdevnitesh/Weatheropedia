@@ -17,6 +17,7 @@ import androidx.core.app.ActivityCompat
 import androidx.datastore.dataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
@@ -61,9 +62,19 @@ class SplashFragment : Fragment() {
         fusedLocationProviderClient =
             LocationServices.getFusedLocationProviderClient(requireActivity())
 
-        CoroutineScope(Dispatchers.IO).launch {
-            requestCurrentLocation()
+        // call getcityName() data store function and if it is empty go to home activity
+        weatherdataManager.cityflow.asLiveData().observe(viewLifecycleOwner) { city ->
+            city.let {
+                if(city.isNotEmpty()){
+                    findNavController().navigate(R.id.action_splashFragment_to_homeActivity)
+                } else {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        requestCurrentLocation()
+                    }
+                }
+            }
         }
+
         return binding.root
     }
 
