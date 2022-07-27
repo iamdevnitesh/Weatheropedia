@@ -25,7 +25,7 @@ Weather App based on complete MVVM architecture.
 10. Lottie Animations
 
 ## Screenshots
-![Screenshot1](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/1.jpg)
+![Screenshot1](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/1.jpg =720x1280)
 
 ![Screenshot2](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/2.jpg)
 
