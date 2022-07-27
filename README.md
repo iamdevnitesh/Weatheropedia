@@ -25,26 +25,30 @@ Weather App based on complete MVVM architecture.
 10. Lottie Animations
 
 ## Screenshots
-![Screenshot1](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/1.jpg =720x1280)
+<p align="center">
 
-![Screenshot2](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/2.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/1.jpg" width="400" height="800">
 
-![Screenshot3](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/3.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/2.jpg" width="400" height="800">
 
-![Screenshot4](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/4.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/3.jpg" width="400" height="800">
 
-![Screenshot5](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/5.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/4.jpg" width="400" height="800">
 
-![Screenshot6](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/6.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/5.jpg" width="400" height="800">
 
-![Screenshot7](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/7.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/6.jpg" width="400" height="800">
 
-![Screenshot8](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/8.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/7.jpg" width="400" height="800">
 
-![Screenshot9](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/9.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/8.jpg" width="400" height="800">
 
-![Screenshot10](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/10.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/9.jpg" width="400" height="800">
 
-![Screenshot11](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/11.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/10.jpg" width="400" height="800">
 
-![Screenshot12](https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/12.jpg)
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/11.jpg" width="400" height="800">
+
+<img src="https://raw.githubusercontent.com/iamdevnitesh/Weatheropedia/master/Assets/12.jpg" width="400" height="800">
+  
+</p>
